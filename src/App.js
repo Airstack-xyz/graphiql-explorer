@@ -14,7 +14,7 @@ import type { GraphQLSchema } from "graphql";
 
 function fetcher(params: Object): Object {
   return fetch(
-    "https://serve.onegraph.com/dynamic?app_id=c333eb5b-04b2-4709-9246-31e18db397e1",
+    "http://localhost:8000",
     {
       method: "POST",
       headers: {
@@ -85,7 +85,7 @@ type State = {
 
 class App extends Component<{}, State> {
   _graphiql: GraphiQL;
-  state = { schema: null, query: DEFAULT_QUERY, explorerIsOpen: true };
+  state = { schema: null, explorerIsOpen: true };
 
   componentDidMount() {
     fetcher({
