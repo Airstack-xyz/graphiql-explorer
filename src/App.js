@@ -14,7 +14,7 @@ import type { GraphQLSchema } from "graphql";
 
 function fetcher(params: Object): Object {
   return fetch(
-    "http://localhost:8000",
+    "http://localhost:8000/gql",
     {
       method: "POST",
       headers: {
